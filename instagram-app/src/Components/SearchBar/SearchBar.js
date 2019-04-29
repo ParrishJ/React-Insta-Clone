@@ -7,6 +7,8 @@ const SearchBar = props => {
     return (
         <div className="topNav">
             <div className="topLogos">
+                <a href="#"><i className="fab fa-instagram"></i></a>
+                <a href="#">Instagram</a>
             </div>
             <div className="search">
                 <input type="text" placeholder="search"></input>

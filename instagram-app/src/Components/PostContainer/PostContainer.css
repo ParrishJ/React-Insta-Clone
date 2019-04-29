@@ -1,1 +1,16 @@
 /* Post container css file */
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border: .5px solid black;
+    margin: 3rem;
+    width: 40%;
+    height: auto;
+    justify-content: flex-start
+}
+
+img {
+    width: 20%;
+    height: auto;
+}
