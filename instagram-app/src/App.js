@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
+import PostContainer from './Components/PostContainer/PostContainer';
 import dummyData from './dummy-data'
 import './App.css';
 
@@ -14,9 +15,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <SearchBar />
+        <PostContainer dummyData={this.state.dummyData} />
       </div>
     );
   }
 }
 
 export default App;
+
