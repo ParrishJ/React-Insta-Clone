@@ -18,9 +18,9 @@ const SearchBar = props => {
                     <input type="text" placeholder="search"></input>
                 </div>
                 <div className ="profileNav">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="#"><i class="fas fa-compass"></i></a>
+                    <a href="#"><i class="fas fa-heart"></i></a>
+                    <a href="#"><i class="fas fa-user"></i></a>
                 </div>
             </Row>
             </Card> 

@@ -19,7 +19,7 @@ import './PostContainer.css' ;
                             <Card key={post.timestamp} className="post">
                                  <CardTitle className="postHead">
                                     <Row>
-                                     <Media src={post.thumbnailUrl} />
+                                     <Media className="thumbnail" src={post.thumbnailUrl} />
                                
                                         <CardTitle>{post.username}</CardTitle> 
                                         </Row>
@@ -27,41 +27,23 @@ import './PostContainer.css' ;
                                 <CardBody>
                                    
                                     <CardImg className="postPic" src={post.imageUrl} />
-                                    <div className="postFoot">
-                                        <img src="" />
-                                        <img src="" />
-                                        <div src={post.likes}></div>
-                                    </div>
+                                    <CardText /* className="postFoot" */>
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-comment"></i>
+                                        <div>{post.likes} likes</div>
+                                    </CardText>
                                     <CommentSection comments={post.comments}/>
                                 </CardBody>
                             </Card>
                         ))}
                     </Col>
-                    {/* <Col></Col> */}
                 </Row>
             </Container>
         </div>  
     )
 }
 
-/* const PostContainer = props => {
-    return(
-       <div>
-           {props.dummyData.map(post => (
-               
-            <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Card title</CardTitle>
-              <CardSubtitle>Card subtitle</CardSubtitle>
-              <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-              <Button>Button</Button>
-            </CardBody>
-          </Card>
-           ))}
-       </div>  
-   )
-} */
+
 
 PostContainer.propTypes = {
     post: PropTypes.arrayOf(
@@ -77,6 +59,10 @@ PostContainer.propTypes = {
             })
         })
     )}
+
+PostContainer.defaultProps = {
+    post: []
+}
 
 
 export default PostContainer

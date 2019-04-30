@@ -19,3 +19,6 @@ img {
     height: auto;
 } */
 
+.thumbnail {
+    border-radius: 50%;
+}
