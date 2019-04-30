@@ -6,24 +6,43 @@ import { Card, CardImg, CardText, CardBody,
 
 
 class CommentSection extends React.Component {
-    constructor (props) {
+    constructor (props) { console.log('comment section props', props.comments);
         super (props);
         this.state = {
-            comment: []
-        }
-    }
-
-    componentDidMount (){
-        this.setState({
-            comment: this.props.comments
-        })
-    }
-
-    addNewComment = (e, index) => {
-        this.state = {
+            comment: [...props.comments],
             newComment: ''
         }
     }
+
+    /* componentDidMount (){
+        this.setState({
+            comment: this.props.comments,
+            newComment: ''
+        })
+    } */
+
+    changeHandler = (e) => {
+        this.setState({
+            newComment: e.target.value
+        })
+    };
+
+    addNewComment = e => {
+        e.preventDefault();
+       /*  const addedNewComment = {username: "guest", text: this.state.newComment.text}; */
+        this.setState = ({
+            comment: [
+                ...this.state.comment, /* addedNewComment */
+                {
+                    text: this.state.newComment, 
+                    username: "guest"
+                }
+            ],
+            newComment: '' 
+        })
+    }
+
+
     
     render(){
     return (
@@ -36,8 +55,9 @@ class CommentSection extends React.Component {
                 </div>            
                 ))}
                 <Row>
-                    <input type="text" placeholder="Add a comment..."></input>
-                    <Button><i class="fas fa-ellipsis-h"></i></Button>
+                    <form onSubmit={this.addNewComment}>
+                        <input name="newComment" value={this.state.newComment} onChange={this.changeHandler} type="text" placeholder="Add a comment..." />
+                    </form>
                 </Row>
         </card>
         

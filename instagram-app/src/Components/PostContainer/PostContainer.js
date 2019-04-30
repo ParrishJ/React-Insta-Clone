@@ -13,7 +13,6 @@ import './PostContainer.css' ;
         <div>
             <Container>
                 <Row>
-                    {/* <Col></Col> */}
                     <Col>
                         {props.dummyData.map(post => ( 
                             <Card key={post.timestamp} className="post">
