@@ -34,7 +34,7 @@ class PostPage extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div /* className="App" */>
         <SearchBar />
         {this.state.dummyData.map((post, index) => (
           <PostContainer post={post} index={index} key={index} />
