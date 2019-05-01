@@ -1,5 +1,5 @@
 // comment section component js file
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types'
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Container, Row, Col, Media } from 'reactstrap';
@@ -9,21 +9,22 @@ class CommentSection extends React.Component {
     constructor (props) { console.log('comment section props', props.comments);
         super (props);
         this.state = {
-            comment: [...props.comments],
+            comment: [],
             newComment: ''
         }
     }
 
-    /* componentDidMount (){
+    componentDidMount (){
         this.setState({
             comment: this.props.comments,
             newComment: ''
         })
-    } */
+    }
 
-    changeHandler = (e) => {
-        this.setState({
-            newComment: e.target.value
+    
+    changeHandler = e => {
+        this.setState = ({
+            newComment: e.target.value,
         })
     };
 
@@ -34,15 +35,15 @@ class CommentSection extends React.Component {
             comment: [
                 ...this.state.comment, /* addedNewComment */
                 {
+                    username: "guest",
                     text: this.state.newComment, 
-                    username: "guest"
                 }
             ],
             newComment: '' 
         })
     }
 
-
+    
     
     render(){
     return (
