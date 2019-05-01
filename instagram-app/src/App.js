@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import PostContainer from "./Components/PostContainer/PostContainer";
 import dummyData from "./dummy-data";
+import withAuthenticate from "./Components/PostContainer/authentication/withAuthenticate";
 import PostPage from "./Components/PostContainer/PostPage";
 import "./App.css";
 
@@ -21,12 +22,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar />
-        {this.state.dummyData.map((post, index) => (
-          <PostContainer post={post} index={index} key={index} />
-        ))}
-        <PostPage />
+      <div>
+        <withAuthenticate />
       </div>
     );
   }
