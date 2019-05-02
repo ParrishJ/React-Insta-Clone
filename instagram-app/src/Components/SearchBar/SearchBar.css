@@ -1,6 +1,27 @@
 /* Search bar css file  */
 
-.topNav {
-    /*  display: flex;
-    justify-content: flex-start; */
+.topLogos {
+    display: flex !important;
+    justify-content: flex-start !important;
+    color: grey !important;
+    padding: 0 40rem 0 5rem;
+}
+
+.topLogos a {
+    color: grey !important;
+    font-size: 1.5rem;
+}
+
+.profileNav {
+    padding-left: 25rem;
+}
+
+.profileNav a {
+    padding: 0 1.5rem;
+    color: grey;
+    font-size: 1.8rem;
+}
+
+.search {
+    padding-top: .4rem;
 }

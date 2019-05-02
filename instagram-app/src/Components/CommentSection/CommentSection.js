@@ -15,22 +15,9 @@ import {
   Media
 } from "reactstrap";
 import styled from "styled-components";
-
-const CommentBox = styled.div`
-  border: none !important;
-`;
-
-const CommentInput = styled.input`
-  width: 100%;
-  height: auto;
-  border: none;
-  border-top: 1pt solid grey;
-`;
-
-const InputForm = styled.form`
-  width: 100%;
-  height: auto;
-`;
+import CommentBox from "../StylesAndReusables/CommentBox";
+import CommentInput from "../StylesAndReusables/CommentInput";
+import InputForm from "../StylesAndReusables/InputForm";
 
 class CommentSection extends React.Component {
   constructor(props) {

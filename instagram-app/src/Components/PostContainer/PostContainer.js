@@ -54,7 +54,6 @@ class PostContainer extends React.Component {
                 <CardTitle className="postHead">
                   <Row>
                     <ThumbnailImg src={this.props.post.thumbnailUrl} />
-
                     <Username>{this.props.post.username}</Username>
                   </Row>
                 </CardTitle>

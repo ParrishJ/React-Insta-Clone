@@ -16,12 +16,9 @@ import {
 } from "reactstrap";
 import dummyData from "../../dummy-data";
 import styled from "styled-components";
+import SearchContainer from "../StylesAndReusables/SearchContainer";
+import LikeIcon from "../StylesAndReusables/LikeIcon";
 import "./SearchBar.css";
-
-const SearchContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
 
 const SearchBar = props => {
   //functional components do not need "this.props, only props" - we dont need a class here because we don't need state, we're just invoking a function.
@@ -44,13 +41,13 @@ const SearchBar = props => {
           </div>
           <div className="profileNav">
             <a href="#">
-              <i className="fas fa-compass" />
+              <i className="far fa-compass" />
             </a>
             <a href="#">
-              <i className="fas fa-heart" />
+              <LikeIcon type="nav" className="far fa-heart" />
             </a>
             <a href="#">
-              <i className="fas fa-user" />
+              <i className="far fa-user" />
             </a>
           </div>
         </Row>
