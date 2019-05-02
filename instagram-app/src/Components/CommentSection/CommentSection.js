@@ -14,6 +14,23 @@ import {
   Col,
   Media
 } from "reactstrap";
+import styled from "styled-components";
+
+const CommentBox = styled.div`
+  border: none !important;
+`;
+
+const CommentInput = styled.input`
+  width: 100%;
+  height: auto;
+  border: none;
+  border-top: 1pt solid grey;
+`;
+
+const InputForm = styled.form`
+  width: 100%;
+  height: auto;
+`;
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -52,25 +69,25 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <Card>
+      <CommentBox>
         {this.state.comments.map((comment, index) => (
           <div className="commentSection" key={index}>
             <h4>{comment.username}</h4>
             <p>{comment.text}</p>
           </div>
         ))}
-        <Row>
-          <form onSubmit={this.addNewComment}>
-            <input
+        <div>
+          <InputForm onSubmit={this.addNewComment}>
+            <CommentInput
               name="newComment"
               value={this.state.newComment}
               onChange={this.changeHandler}
               type="text"
               placeholder="Add a comment..."
             />
-          </form>
-        </Row>
-      </Card>
+          </InputForm>
+        </div>
+      </CommentBox>
     );
   }
 }

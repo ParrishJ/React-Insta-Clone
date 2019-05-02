@@ -15,6 +15,11 @@ import {
   Col,
   Media
 } from "reactstrap";
+import styled from "styled-components";
+import LikeIcon from "../StylesAndReusables/LikeIcon";
+import ThumbnailImg from "../StylesAndReusables/ThumbnailImg";
+import Username from "../StylesAndReusables/Username";
+import CommentIcon from "../StylesAndReusables/CommentIcon";
 
 import "./PostContainer.css";
 
@@ -48,20 +53,19 @@ class PostContainer extends React.Component {
               <Card key={this.props.post.timestamp} className="post">
                 <CardTitle className="postHead">
                   <Row>
-                    <Media
-                      heading
-                      className="thumbnail"
-                      src={this.props.post.thumbnailUrl}
-                    />
+                    <ThumbnailImg src={this.props.post.thumbnailUrl} />
 
-                    <CardTitle>{this.props.post.username}</CardTitle>
+                    <Username>{this.props.post.username}</Username>
                   </Row>
                 </CardTitle>
                 <CardBody>
                   <CardImg className="postPic" src={this.props.post.imageUrl} />
                   <CardText>
-                    <i onClick={this.clickHandler} className="fas fa-heart" />
-                    <i className="fas fa-comment" />
+                    <LikeIcon
+                      onClick={this.clickHandler}
+                      className="far fa-heart"
+                    />
+                    <CommentIcon className="far fa-comment" />
                     <div>{this.state.likes} likes</div>
                   </CardText>
                   <CommentSection

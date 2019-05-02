@@ -15,12 +15,18 @@ import {
   Media
 } from "reactstrap";
 import dummyData from "../../dummy-data";
+import styled from "styled-components";
 import "./SearchBar.css";
+
+const SearchContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const SearchBar = props => {
   //functional components do not need "this.props, only props" - we dont need a class here because we don't need state, we're just invoking a function.
   return (
-    <div className="topNav">
+    <SearchContainer className="topNav">
       <Card>
         <Row>
           <div className="topLogos">
@@ -49,7 +55,7 @@ const SearchBar = props => {
           </div>
         </Row>
       </Card>
-    </div>
+    </SearchContainer>
   );
 };
 
