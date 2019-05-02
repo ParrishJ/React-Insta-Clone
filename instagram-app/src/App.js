@@ -7,7 +7,7 @@ import PostPage from "./Components/PostContainer/PostPage";
 import Login from "./Components/Login/Login";
 import "./App.css";
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(Login);
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
 
 class App extends React.Component {
   render() {

@@ -17,9 +17,11 @@ img {
 .post .postPic {
     width: 100%;
     height: auto;
-} */
+} may need !important here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .thumbnail {
-    border-radius: 50%;
-
+    /* border-radius: 50%;
+    width: 3rem !important;
+    height: 3rem !important;
+    margin: 1rem 0 0 2.5rem; */
 }

@@ -19,26 +19,40 @@ import {
 } from "reactstrap";
 
 class PostPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      dummyData: []
+      posts: [],
+      filteredPosts: []
     };
   }
 
   componentDidMount() {
     this.setState({
-      dummyData: dummyData
+      posts: dummyData
     });
   }
+
+  searchPosts = e => {
+    const searchedPosts = this.state.posts.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPosts: searchedPosts });
+  };
 
   render() {
     return (
       <div /* className="App" */>
-        <SearchBar />
-        {this.state.dummyData.map((post, index) => (
-          <PostContainer post={post} index={index} key={index} />
-        ))}
+        <SearchBar searchPosts={this.searchPosts} />
+        {this.state.filteredPosts.length > 0
+          ? this.state.filteredPosts.map(post => (
+              <PostContainer post={post} key={post.timestamp} />
+            ))
+          : this.state.posts.map(post => (
+              <PostContainer post={post} key={post.timestamp} />
+            ))}
       </div>
     );
   }

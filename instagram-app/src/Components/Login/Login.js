@@ -22,18 +22,6 @@ class Login extends React.Component {
     };
   }
 
-  loginHandler = e => {
-    e.preventDefault();
-    if (localStorage.getItem("username")) {
-      localStorage.removeItem("username");
-      this.setState({ isLoggedIn: false });
-    } else {
-      localStorage.setItem("username", "JP");
-      this.setState({ isLoggedIn: true });
-      window.location.reload();
-    }
-  };
-
   render() {
     return (
       <Card>

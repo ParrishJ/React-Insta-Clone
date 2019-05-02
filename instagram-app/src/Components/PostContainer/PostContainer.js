@@ -49,6 +49,7 @@ class PostContainer extends React.Component {
                 <CardTitle className="postHead">
                   <Row>
                     <Media
+                      heading
                       className="thumbnail"
                       src={this.props.post.thumbnailUrl}
                     />

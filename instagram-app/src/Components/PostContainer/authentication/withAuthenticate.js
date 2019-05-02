@@ -1,13 +1,9 @@
 import React from "react";
 
-const withAuthenticate = HOCComp => HOCComp2 =>
+const withAuthenticate = HOCComp =>
   class extends React.Component {
     render() {
-      if (localStorage.getItem("username")) {
-        return <HOCComp />;
-      } else {
-        return <HOCComp2 />;
-      }
+      return <HOCComp />;
     }
   };
 
