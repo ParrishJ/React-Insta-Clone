@@ -1,0 +1,27 @@
+/* Post container css file */
+
+/* .post {
+    display: flex;
+    flex-direction: column;
+    border: .5px solid black;
+    margin: 3rem;
+    height: auto;
+    justify-content: flex-start
+}
+
+img {
+    width: 20%;
+    height: auto;
+}
+
+.post .postPic {
+    width: 100%;
+    height: auto;
+} may need !important here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.thumbnail {
+    /* border-radius: 50%;
+    width: 3rem !important;
+    height: 3rem !important;
+    margin: 1rem 0 0 2.5rem; */
+}
